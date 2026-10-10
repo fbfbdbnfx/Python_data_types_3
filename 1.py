@@ -5,8 +5,11 @@ students = [
 ]
 
 average_grades=[{i['name']: sum(i["grades"])/len(i["grades"]) } for i in students]
+max_grade=max(average_grades, key=lambda d:list(d.values())[0])
 
 print(average_grades)
 
-maxgrade=max(list(i.values()) for i in average_grades)
-print(maxgrade)
+print(max_grade)
+
+
+
